@@ -158,9 +158,9 @@ function applyTeamInfo() {
 // ==========================================
 const typingPhrases = [
   "ICBC IRON-UMMAH",
-  "INTO THE DEEP 2025",
-  "Team #27859",
-  "Built Different.",
+  "Inspiring the next generation of innovators",
+  "Engineering excellence, community impact.",
+  "Building robots, building character.",
   "Innovate. Inspire. Win.",
 ];
 
@@ -173,8 +173,8 @@ function startTypingAnimation() {
   let isDeleting = false;
 
   const TYPE_SPEED = 80; // ms per character when typing
-  const DELETE_SPEED = 40; // ms per character when deleting
-  const HOLD_DELAY = 2000; // ms to hold before deleting
+  const DELETE_SPEED = 120; // ms per character when deleting
+  const HOLD_DELAY = 2800; // ms to hold before deleting
   const NEXT_DELAY = 400; // ms pause before typing next phrase
 
   function tick() {
