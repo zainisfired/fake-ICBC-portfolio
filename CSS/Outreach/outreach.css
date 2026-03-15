@@ -1,0 +1,85 @@
+/* ==========================================
+   outreach.css — Outreach Stats & Cards
+   ========================================== */
+
+.outreach-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  background: var(--deep);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  margin-bottom: 4rem;
+}
+.o-stat {
+  text-align: center;
+}
+.o-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #60a5fa;
+}
+.o-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 0.3rem;
+}
+
+.outreach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.outreach-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+.outreach-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.1);
+}
+
+.outreach-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.outreach-body {
+  padding: 1.5rem;
+}
+.outreach-tag {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--accent2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+.outreach-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--deep);
+}
+.outreach-desc {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .outreach-stats {
+    gap: 1.5rem;
+  }
+}

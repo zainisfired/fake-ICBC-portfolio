@@ -1,0 +1,106 @@
+/* ==========================================
+   sponsors.css — Sponsor Tiers & CTA
+   ========================================== */
+
+.sponsor-tier {
+  margin-bottom: 3.5rem;
+}
+
+.tier-label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.tier-label.gold {
+  color: var(--gold);
+}
+.tier-label.silver {
+  color: var(--silver);
+}
+.tier-label.bronze {
+  color: var(--bronze);
+}
+
+.sponsors-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.sponsor-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 2rem;
+  min-width: 180px;
+  text-align: center;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+.sponsor-card:hover {
+  transform: translateY(-3px);
+}
+
+.sponsor-logo {
+  width: 100%;
+  aspect-ratio: 3/1;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+}
+.sponsor-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: var(--deep);
+}
+.sponsor-type {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.gold-card {
+  border-color: rgba(217, 119, 6, 0.3);
+}
+.gold-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.1);
+}
+.silver-card {
+  border-color: rgba(100, 116, 139, 0.3);
+}
+.silver-card:hover {
+  border-color: var(--silver);
+  box-shadow: 0 8px 24px rgba(100, 116, 139, 0.1);
+}
+.bronze-card {
+  border-color: rgba(180, 83, 9, 0.3);
+}
+.bronze-card:hover {
+  border-color: var(--bronze);
+  box-shadow: 0 8px 24px rgba(180, 83, 9, 0.1);
+}
+
+.sponsor-cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--deep), #1e3a8a);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+.sponsor-cta h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+.sponsor-cta p {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}

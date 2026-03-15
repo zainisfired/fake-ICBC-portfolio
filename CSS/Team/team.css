@@ -1,0 +1,54 @@
+/* ==========================================
+   team.css — Team Grid & Member Cards
+   ========================================== */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.75rem;
+}
+
+.member-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+  text-align: center;
+}
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12);
+}
+
+.member-photo {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.member-info {
+  padding: 1.2rem;
+}
+.member-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--deep);
+}
+.member-role {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--accent2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  margin-bottom: 0.6rem;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+.member-grade {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}

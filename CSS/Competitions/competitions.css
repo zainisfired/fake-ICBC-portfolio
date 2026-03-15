@@ -1,0 +1,118 @@
+/* ==========================================
+   competitions.css — Timeline
+   ========================================== */
+
+.timeline {
+  position: relative;
+  padding: 1rem 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--bg), var(--accent2), var(--bg));
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 2.5rem);
+  margin-bottom: 3rem;
+  position: relative;
+}
+.timeline-item:nth-child(even) {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 2.5rem);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 1.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent2);
+  border: 3px solid var(--bg);
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  z-index: 1;
+}
+
+.timeline-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  transition:
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+.timeline-card:hover {
+  border-color: #93c5fd;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.1);
+}
+
+.tc-date {
+  color: var(--accent2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.tc-event {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: var(--deep);
+}
+.tc-location {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.tc-result {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+.tc-result.win {
+  background: rgba(34, 197, 94, 0.1);
+  color: #15803d;
+}
+.tc-result.place {
+  background: rgba(217, 119, 6, 0.1);
+  color: #d97706;
+}
+.tc-result.attend {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent2);
+}
+
+@media (max-width: 900px) {
+  .timeline::before {
+    left: 1.25rem;
+  }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 3.5rem;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+  .timeline-dot {
+    left: 1.25rem;
+  }
+}
