@@ -1,3 +1,8 @@
+// ==========================================
+//  FTC TEAM PORTFOLIO — app.js
+// ==========================================
+
+// ---- PAGE NAVIGATION ----
 function showPage(pageId) {
   document
     .querySelectorAll(".page")
@@ -14,9 +19,11 @@ function showPage(pageId) {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
+  // Close mobile menu
   document.getElementById("navLinks").classList.remove("open");
 }
 
+// ---- NAV LINK CLICKS ----
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -24,20 +31,28 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
+// ---- BRAND CLICK → HOME ----
 document
   .querySelector(".nav-brand")
   .addEventListener("click", () => showPage("home"));
 
+// ---- HAMBURGER ----
 document.getElementById("hamburger").addEventListener("click", () => {
   document.getElementById("navLinks").classList.toggle("open");
 });
 
+// ---- SCROLL SHADOW ----
 window.addEventListener("scroll", () => {
   document
     .getElementById("navbar")
     .classList.toggle("scrolled", window.scrollY > 20);
 });
 
+// ==========================================
+//  RENDER FUNCTIONS
+// ==========================================
+
+// ---- TEAM ----
 function renderTeam() {
   const grid = document.getElementById("teamGrid");
   grid.innerHTML = MEMBERS.map(
@@ -54,6 +69,7 @@ function renderTeam() {
   ).join("");
 }
 
+// ---- COMPETITION TIMELINE ----
 function renderTimeline() {
   const tl = document.getElementById("timeline");
   tl.innerHTML = COMPETITIONS.map(
@@ -72,6 +88,7 @@ function renderTimeline() {
   ).join("");
 }
 
+// ---- AWARDS ----
 function renderAwards() {
   const grid = document.getElementById("awardsGrid");
   grid.innerHTML = AWARDS.map(
@@ -88,6 +105,7 @@ function renderAwards() {
   ).join("");
 }
 
+// ---- OUTREACH ----
 function renderOutreach() {
   const grid = document.getElementById("outreachGrid");
   grid.innerHTML = OUTREACH.map(
@@ -104,6 +122,7 @@ function renderOutreach() {
   ).join("");
 }
 
+// ---- SPONSORS ----
 function renderSponsors() {
   const tiers = [
     { id: "goldSponsors", data: SPONSORS.gold, cls: "gold-card" },
@@ -125,6 +144,7 @@ function renderSponsors() {
   });
 }
 
+// ---- INJECT TEAM INFO ----
 function applyTeamInfo() {
   document.querySelectorAll(".nav-team-name").forEach((el) => {
     el.innerHTML = `Team <span class="accent">${TEAM.number}</span>`;
@@ -133,6 +153,63 @@ function applyTeamInfo() {
   if (cta) cta.href = `mailto:${TEAM.email}`;
 }
 
+// ==========================================
+//  TYPING ANIMATION
+// ==========================================
+const typingPhrases = [
+  "ICBC IRON-UMMAH",
+  "INTO THE DEEP 2025",
+  "Team #27859",
+  "Built Different.",
+  "Innovate. Inspire. Win.",
+];
+
+function startTypingAnimation() {
+  const el = document.querySelector(".hero-sub");
+  if (!el) return;
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const TYPE_SPEED = 80; // ms per character when typing
+  const DELETE_SPEED = 40; // ms per character when deleting
+  const HOLD_DELAY = 2000; // ms to hold before deleting
+  const NEXT_DELAY = 400; // ms pause before typing next phrase
+
+  function tick() {
+    const current = typingPhrases[phraseIndex];
+
+    if (isDeleting) {
+      charIndex--;
+      el.textContent = current.slice(0, charIndex);
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+        setTimeout(tick, NEXT_DELAY);
+        return;
+      }
+      setTimeout(tick, DELETE_SPEED);
+    } else {
+      charIndex++;
+      el.textContent = current.slice(0, charIndex);
+
+      if (charIndex === current.length) {
+        isDeleting = true;
+        setTimeout(tick, HOLD_DELAY);
+        return;
+      }
+      setTimeout(tick, TYPE_SPEED);
+    }
+  }
+
+  tick();
+}
+
+// ==========================================
+//  INIT
+// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   applyTeamInfo();
   renderTeam();
@@ -140,4 +217,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAwards();
   renderOutreach();
   renderSponsors();
+  startTypingAnimation();
 });
