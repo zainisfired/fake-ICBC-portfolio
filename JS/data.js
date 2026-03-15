@@ -6,14 +6,18 @@ const TEAM = {
 };
 
 const MEMBERS = [
-  { name: "Alex Johnson",   role: "Captain / Lead Engineer", grade: "12th Grade" },
-  { name: "Maria Chen",     role: "Lead Programmer",          grade: "11th Grade" },
-  { name: "Jordan Smith",   role: "Build Lead",               grade: "11th Grade" },
-  { name: "Taylor Brown",   role: "Autonomous Dev",           grade: "10th Grade" },
-  { name: "Sam Lee",        role: "CAD Designer",             grade: "10th Grade" },
-  { name: "Casey Wilson",   role: "Drive Team",               grade: "12th Grade" },
-  { name: "Riley Davis",    role: "Outreach Lead",            grade: "9th Grade"  },
-  { name: "Morgan Kim",     role: "Business / Notebook",      grade: "11th Grade" },
+  {
+    name: "Alex Johnson",
+    role: "Captain / Lead Engineer",
+    grade: "12th Grade",
+  },
+  { name: "Maria Chen", role: "Lead Programmer", grade: "11th Grade" },
+  { name: "Jordan Smith", role: "Build Lead", grade: "11th Grade" },
+  { name: "Taylor Brown", role: "Autonomous Dev", grade: "10th Grade" },
+  { name: "Sam Lee", role: "CAD Designer", grade: "10th Grade" },
+  { name: "Casey Wilson", role: "Drive Team", grade: "12th Grade" },
+  { name: "Riley Davis", role: "Outreach Lead", grade: "9th Grade" },
+  { name: "Morgan Kim", role: "Business / Notebook", grade: "11th Grade" },
 ];
 
 const COMPETITIONS = [
@@ -68,14 +72,49 @@ const COMPETITIONS = [
 ];
 
 const AWARDS = [
-  { icon: "🏆", title: "Inspire Award — 1st Place",  event: "Regional Championship", date: "Jan 2025" },
-  { icon: "🥇", title: "1st Place Alliance Captain",  event: "Qualifier #1",          date: "Oct 2024" },
-  { icon: "💡", title: "Think Award",                 event: "Qualifier #2",           date: "Nov 2024" },
-  { icon: "🎨", title: "Design Award",                event: "State Championship",     date: "Feb 2025" },
-  { icon: "🤝", title: "Connect Award",               event: "Qualifier #1",           date: "Oct 2024" },
-  { icon: "🌟", title: "Motivate Award — 2nd Place",  event: "Regional Championship", date: "Jan 2025" },
-  { icon: "🔩", title: "Innovate Award",              event: "Qualifier #2",           date: "Nov 2024" },
-  { icon: "🌐", title: "World Championship Qualifier",event: "State Championship",     date: "Feb 2025" },
+  {
+    icon: "🏆",
+    title: "Inspire Award — 1st Place",
+    event: "Regional Championship",
+    date: "Jan 2025",
+  },
+  {
+    icon: "🥇",
+    title: "1st Place Alliance Captain",
+    event: "Qualifier #1",
+    date: "Oct 2024",
+  },
+  { icon: "💡", title: "Think Award", event: "Qualifier #2", date: "Nov 2024" },
+  {
+    icon: "🎨",
+    title: "Design Award",
+    event: "State Championship",
+    date: "Feb 2025",
+  },
+  {
+    icon: "🤝",
+    title: "Connect Award",
+    event: "Qualifier #1",
+    date: "Oct 2024",
+  },
+  {
+    icon: "🌟",
+    title: "Motivate Award — 2nd Place",
+    event: "Regional Championship",
+    date: "Jan 2025",
+  },
+  {
+    icon: "🔩",
+    title: "Innovate Award",
+    event: "Qualifier #2",
+    date: "Nov 2024",
+  },
+  {
+    icon: "🌐",
+    title: "World Championship Qualifier",
+    event: "State Championship",
+    date: "Feb 2025",
+  },
 ];
 
 const OUTREACH = [
@@ -113,18 +152,18 @@ const OUTREACH = [
 
 const SPONSORS = {
   gold: [
-    { name: "TechCorp Inc.",      type: "Technology Partner" },
-    { name: "Innovate Foundation", type: "Education Grant"   },
+    { name: "TechCorp Inc.", type: "Technology Partner" },
+    { name: "Innovate Foundation", type: "Education Grant" },
   ],
   silver: [
-    { name: "Local Hardware Co.",  type: "Parts Sponsor"     },
-    { name: "STEM Forward",        type: "Education Partner" },
-    { name: "City Engineering",    type: "Mentorship"        },
+    { name: "Local Hardware Co.", type: "Parts Sponsor" },
+    { name: "STEM Forward", type: "Education Partner" },
+    { name: "City Engineering", type: "Mentorship" },
   ],
   bronze: [
-    { name: "Pizza Palace",        type: "Food Sponsor"      },
-    { name: "Print & Go",          type: "Print Services"    },
+    { name: "Pizza Palace", type: "Food Sponsor" },
+    { name: "Print & Go", type: "Print Services" },
     { name: "Parent Booster Club", type: "Community Support" },
-    { name: "School Foundation",   type: "School Support"    },
+    { name: "School Foundation", type: "School Support" },
   ],
 };
