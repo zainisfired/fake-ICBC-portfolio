@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FTC Team 27859 — ICBC IRON-UMMAH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <div class="nav-logo">⚙</div>
+      <span class="nav-team-name">Team <span class="accent">#27859</span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+      <li><a href="#team" class="nav-link" data-page="team">Team</a></li>
+      <li><a href="#robot" class="nav-link" data-page="robot">Robot</a></li>
+      <li><a href="#competitions" class="nav-link" data-page="competitions">Competitions</a></li>
+      <li><a href="#awards" class="nav-link" data-page="awards">Awards</a></li>
+      <li><a href="#outreach" class="nav-link" data-page="outreach">Outreach</a></li>
+      <li><a href="#sponsors" class="nav-link" data-page="sponsors">Sponsors</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGES -->
+  <main>
+
+    <!-- HOME -->
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">FTC Season 2024–2025</div>
+          <h1 class="hero-title">Team <span class="accent">#27859</span><br/><span class="hero-sub">ICBC IRON-UMMAH</span></h1>
+          <p class="hero-desc">We are a passionate FIRST Tech Challenge robotics team dedicated to innovation, engineering excellence, and inspiring the next generation of STEM leaders.</p>
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="showPage('team')">Meet the Team</button>
+            <button class="btn btn-outline" onclick="showPage('robot')">See Our Robot</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="img-placeholder hero-img-box">
+            <span>Team Photo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat"><div class="stat-num accent">12</div><div class="stat-label">Members</div></div>
+        <div class="stat"><div class="stat-num accent">8</div><div class="stat-label">Competitions</div></div>
+        <div class="stat"><div class="stat-num accent">15+</div><div class="stat-label">Awards</div></div>
+        <div class="stat"><div class="stat-num accent">500+</div><div class="stat-label">Outreach Hours</div></div>
+      </div>
+
+      <div class="section-container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">🔧</div>
+            <h3>Engineering</h3>
+            <p>We approach every design challenge with creativity, iteration, and precision — building robots that push the limits of what's possible.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🤝</div>
+            <h3>Gracious Professionalism</h3>
+            <p>Competing with integrity and supporting fellow teams is at the core of everything we do, on and off the field.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🌍</div>
+            <h3>Community</h3>
+            <p>From STEM workshops to school demos, we're committed to giving back and inspiring future engineers in our community.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="page" id="team">
+      <div class="section-container">
+        <div class="page-header">
+          <h1 class="page-title">Meet the <span class="accent">Team</span></h1>
+          <p class="page-subtitle">The people behind the machine — meet our engineers, programmers, and leaders.</p>
+        </div>
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- ROBOT -->
+    <section class="page" id="robot">
+      <div class="section-container">
+        <div class="page-header">
+          <h1 class="page-title">Our <span class="accent">Robot</span></h1>
+          <p class="page-subtitle">Designed, built, and programmed entirely by our team.</p>
+        </div>
+        <div class="robot-layout">
+          <div class="robot-gallery">
+            <div class="img-placeholder robot-main-img"><span>Robot Front View</span></div>
+            <div class="robot-thumbs">
+              <div class="img-placeholder robot-thumb"><span>Side View</span></div>
+              <div class="img-placeholder robot-thumb"><span>Top View</span></div>
+              <div class="img-placeholder robot-thumb"><span>Detail</span></div>
+            </div>
+          </div>
+          <div class="robot-info">
+            <h2 class="robot-name accent">ROBOT NAME</h2>
+            <p class="robot-desc">Our robot for the 2024–2025 INTO THE DEEP season features a custom-designed arm mechanism, precision drivetrain, and autonomous routines optimized for scoring efficiency.</p>
+            <div class="specs-grid">
+              <div class="spec-item"><div class="spec-label">Drivetrain</div><div class="spec-val">Mecanum Wheels</div></div>
+              <div class="spec-item"><div class="spec-label">Height</div><div class="spec-val">18 inches</div></div>
+              <div class="spec-item"><div class="spec-label">Weight</div><div class="spec-val">28 lbs</div></div>
+              <div class="spec-item"><div class="spec-label">Control Hub</div><div class="spec-val">REV Control Hub</div></div>
+              <div class="spec-item"><div class="spec-label">Language</div><div class="spec-val">Java / Blocks</div></div>
+              <div class="spec-item"><div class="spec-label">Auto Modes</div><div class="spec-val">4 Routines</div></div>
+            </div>
+            <div class="robot-features">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li>✦ Linear slide extension arm</li>
+                <li>✦ Vision-based specimen detection</li>
+                <li>✦ Custom intake mechanism</li>
+                <li>✦ Gyro-assisted autonomous</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITIONS -->
+    <section class="page" id="competitions">
+      <div class="section-container">
+        <div class="page-header">
+          <h1 class="page-title">Competition <span class="accent">Timeline</span></h1>
+          <p class="page-subtitle">Our journey through the 2024–2025 season.</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="page" id="awards">
+      <div class="section-container">
+        <div class="page-header">
+          <h1 class="page-title">Our <span class="accent">Awards</span></h1>
+          <p class="page-subtitle">Recognition for our hard work, innovation, and teamwork.</p>
+        </div>
+        <div class="awards-grid" id="awardsGrid"></div>
+      </div>
+    </section>
+
+    <!-- OUTREACH -->
+    <section class="page" id="outreach">
+      <div class="section-container">
+        <div class="page-header">
+          <h1 class="page-title">Community <span class="accent">Outreach</span></h1>
+          <p class="page-subtitle">Inspiring the next generation of innovators.</p>
+        </div>
+        <div class="outreach-stats">
+          <div class="o-stat"><div class="o-num accent">500+</div><div class="o-label">Volunteer Hours</div></div>
+          <div class="o-stat"><div class="o-num accent">20+</div><div class="o-label">Events Hosted</div></div>
+          <div class="o-stat"><div class="o-num accent">1,200+</div><div class="o-label">Students Reached</div></div>
+        </div>
+        <div class="outreach-grid" id="outreachGrid"></div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section class="page" id="sponsors">
+      <div class="section-container">
+        <div class="page-header">
+          <h1 class="page-title">Our <span class="accent">Sponsors</span></h1>
+          <p class="page-subtitle">We couldn't do it without the generous support of our partners.</p>
+        </div>
+
+        <div class="sponsor-tier">
+          <div class="tier-label gold">🥇 Gold Sponsors</div>
+          <div class="sponsors-row" id="goldSponsors"></div>
+        </div>
+        <div class="sponsor-tier">
+          <div class="tier-label silver">🥈 Silver Sponsors</div>
+          <div class="sponsors-row" id="silverSponsors"></div>
+        </div>
+        <div class="sponsor-tier">
+          <div class="tier-label bronze">🥉 Bronze Sponsors</div>
+          <div class="sponsors-row" id="bronzeSponsors"></div>
+        </div>
+
+        <div class="sponsor-cta">
+          <h3>Interested in Sponsoring Us?</h3>
+          <p>Your support helps us purchase parts, attend competitions, and run community events. We'd love to partner with you!</p>
+          <a href="mailto:team@example.com" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="nav-brand">
+        <div class="nav-logo">⚙</div>
+        <span>Team <span class="accent">#27859</span> · ICBC IRON-UMMAH</span>
+      </div>
+      <p class="footer-text">© 2025 FTC Team #27859 · ICBC IRON-UMMAH · Built with passion</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
