@@ -1,8 +1,3 @@
-// ==========================================
-//  FTC TEAM PORTFOLIO — data.js
-//  Edit all your team info here!
-// ==========================================
-
 const TEAM = {
   number: "#27859",
   name: "ICBC IRON-UMMAH",
@@ -10,7 +5,6 @@ const TEAM = {
   email: "team@example.com",
 };
 
-// ---- TEAM MEMBERS ----
 const MEMBERS = [
   { name: "Alex Johnson",   role: "Captain / Lead Engineer", grade: "12th Grade" },
   { name: "Maria Chen",     role: "Lead Programmer",          grade: "11th Grade" },
@@ -22,7 +16,6 @@ const MEMBERS = [
   { name: "Morgan Kim",     role: "Business / Notebook",      grade: "11th Grade" },
 ];
 
-// ---- COMPETITION TIMELINE ----
 const COMPETITIONS = [
   {
     date: "Oct 12, 2024",
@@ -74,7 +67,6 @@ const COMPETITIONS = [
   },
 ];
 
-// ---- AWARDS ----
 const AWARDS = [
   { icon: "🏆", title: "Inspire Award — 1st Place",  event: "Regional Championship", date: "Jan 2025" },
   { icon: "🥇", title: "1st Place Alliance Captain",  event: "Qualifier #1",          date: "Oct 2024" },
@@ -86,7 +78,6 @@ const AWARDS = [
   { icon: "🌐", title: "World Championship Qualifier",event: "State Championship",     date: "Feb 2025" },
 ];
 
-// ---- OUTREACH ----
 const OUTREACH = [
   {
     tag: "STEM Workshop",
@@ -120,7 +111,6 @@ const OUTREACH = [
   },
 ];
 
-// ---- SPONSORS ----
 const SPONSORS = {
   gold: [
     { name: "TechCorp Inc.",      type: "Technology Partner" },

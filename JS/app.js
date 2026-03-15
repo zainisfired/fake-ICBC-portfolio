@@ -1,8 +1,3 @@
-// ==========================================
-//  FTC TEAM PORTFOLIO — app.js
-// ==========================================
-
-// ---- PAGE NAVIGATION ----
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
@@ -15,11 +10,9 @@ function showPage(pageId) {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  // Close mobile menu
   document.getElementById('navLinks').classList.remove('open');
 }
 
-// ---- NAV LINK CLICKS ----
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -27,24 +20,16 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-// ---- BRAND CLICK → HOME ----
 document.querySelector('.nav-brand').addEventListener('click', () => showPage('home'));
 
-// ---- HAMBURGER ----
 document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('navLinks').classList.toggle('open');
 });
 
-// ---- SCROLL SHADOW ----
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
 });
 
-// ==========================================
-//  RENDER FUNCTIONS
-// ==========================================
-
-// ---- TEAM ----
 function renderTeam() {
   const grid = document.getElementById('teamGrid');
   grid.innerHTML = MEMBERS.map(m => `
@@ -59,7 +44,6 @@ function renderTeam() {
   `).join('');
 }
 
-// ---- COMPETITION TIMELINE ----
 function renderTimeline() {
   const tl = document.getElementById('timeline');
   tl.innerHTML = COMPETITIONS.map((c, i) => `
@@ -76,7 +60,6 @@ function renderTimeline() {
   `).join('');
 }
 
-// ---- AWARDS ----
 function renderAwards() {
   const grid = document.getElementById('awardsGrid');
   grid.innerHTML = AWARDS.map(a => `
@@ -91,7 +74,6 @@ function renderAwards() {
   `).join('');
 }
 
-// ---- OUTREACH ----
 function renderOutreach() {
   const grid = document.getElementById('outreachGrid');
   grid.innerHTML = OUTREACH.map(o => `
@@ -106,7 +88,6 @@ function renderOutreach() {
   `).join('');
 }
 
-// ---- SPONSORS ----
 function renderSponsors() {
   const tiers = [
     { id: 'goldSponsors',   data: SPONSORS.gold,   cls: 'gold-card'   },
@@ -124,7 +105,6 @@ function renderSponsors() {
   });
 }
 
-// ---- INJECT TEAM INFO ----
 function applyTeamInfo() {
   document.querySelectorAll('.nav-team-name').forEach(el => {
     el.innerHTML = `Team <span class="accent">${TEAM.number}</span>`;
@@ -133,9 +113,6 @@ function applyTeamInfo() {
   if (cta) cta.href = `mailto:${TEAM.email}`;
 }
 
-// ==========================================
-//  INIT
-// ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   applyTeamInfo();
   renderTeam();
