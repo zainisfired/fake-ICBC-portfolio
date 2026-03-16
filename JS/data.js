@@ -7,17 +7,73 @@ const TEAM = {
 
 const MEMBERS = [
   {
-    name: "Alex Johnson",
-    role: "Captain / Lead Engineer",
+    name: "Hamza R",
+    role: "Captain / Software Lead / Driver",
     grade: "12th Grade",
   },
-  { name: "Maria Chen", role: "Lead Programmer", grade: "11th Grade" },
-  { name: "Jordan Smith", role: "Build Lead", grade: "11th Grade" },
-  { name: "Taylor Brown", role: "Autonomous Dev", grade: "10th Grade" },
-  { name: "Sam Lee", role: "CAD Designer", grade: "10th Grade" },
-  { name: "Casey Wilson", role: "Drive Team", grade: "12th Grade" },
-  { name: "Riley Davis", role: "Outreach Lead", grade: "9th Grade" },
-  { name: "Morgan Kim", role: "Business / Notebook", grade: "11th Grade" },
+  {
+    name: "Ibrahim Syed",
+    role: "Autonomous / Teleop",
+    grade: "11th Grade",
+  },
+  {
+    name: "Zain Qadri",
+    role: "Autonomous Lead",
+    grade: "8th Grade",
+  },
+  {
+    name: "Sereen S",
+    role: "Hardware Lead / Robot CAD / Assembly",
+    grade: "11th Grade",
+  },
+  {
+    name: "Safa K",
+    role: "Robot Assembly",
+    grade: "8th Grade",
+  },
+  {
+    name: "Nusaybah K",
+    role: "Robot Assembly",
+    grade: "8th Grade",
+  },
+  {
+    name: "Ihsan K",
+    role: "Robot Assembly",
+    grade: "8th Grade",
+  },
+  {
+    name: "Zayd S",
+    role: "Robot CAD",
+    grade: "8th Grade",
+  },
+  {
+    name: "Shaheen S",
+    role: "Robot CAD",
+    grade: "8th Grade",
+  },
+  {
+    name: "Haani S",
+    role: "Robot CAD",
+    grade: "11th Grade",
+  },
+];
+
+const MENTORS = [
+  {
+    name: "Brother Mohib",
+    role: "Lead Software Mentor",
+    expertise: "Software Engineering",
+  },
+  {
+    name: "Brother Hawzin",
+    role: "Lead Hardware Mentor",
+    expertise: "Mechanical Design",
+  },
+  {
+    name: "The Parents",
+    role: "Supporting the Team Throughout the Entire Season",
+    expertise: "Motivation",
+  },
 ];
 
 const COMPETITIONS = [
@@ -77,43 +133,64 @@ const AWARDS = [
     title: "Inspire Award — 1st Place",
     event: "Regional Championship",
     date: "Jan 2025",
+    description:
+      "Most prestigious award recognizing team excellence in robot design, engineering notebook, community outreach, and overall team performance.",
   },
   {
     icon: "🥇",
     title: "1st Place Alliance Captain",
     event: "Qualifier #1",
     date: "Oct 2024",
+    description:
+      "Led the winning alliance as captain, demonstrating strategic gameplay and strong robot performance in elimination matches.",
   },
-  { icon: "💡", title: "Think Award", event: "Qualifier #2", date: "Nov 2024" },
+  {
+    icon: "💡",
+    title: "Think Award",
+    event: "Qualifier #2",
+    date: "Nov 2024",
+    description:
+      "Awarded for exceptional engineering documentation, design process, and reflection in the team's engineering notebook.",
+  },
   {
     icon: "🎨",
     title: "Design Award",
     event: "State Championship",
     date: "Feb 2025",
+    description:
+      "Recognizes innovative and functional robot design, including mechanical build quality and creative problem-solving.",
   },
   {
     icon: "🤝",
     title: "Connect Award",
     event: "Qualifier #1",
     date: "Oct 2024",
+    description:
+      "Honors teams that make connections with engineering professionals and serve as STEM ambassadors in their community.",
   },
   {
     icon: "🌟",
     title: "Motivate Award — 2nd Place",
     event: "Regional Championship",
     date: "Jan 2025",
+    description:
+      "Celebrates team spirit, enthusiasm, and the ability to share excitement about robotics with others.",
   },
   {
     icon: "🔩",
     title: "Innovate Award",
     event: "Qualifier #2",
     date: "Nov 2024",
+    description:
+      "Recognizes creative and innovative solutions to game challenges, showing original thinking in robot design or strategy.",
   },
   {
     icon: "🌐",
     title: "World Championship Qualifier",
     event: "State Championship",
     date: "Feb 2025",
+    description:
+      "Advanced to represent our region at the FIRST World Championship in Houston, Texas.",
   },
 ];
 
@@ -126,7 +203,7 @@ const OUTREACH = [
   {
     tag: "FTC Mentorship",
     title: "Rookie Team Mentorship",
-    desc: "Partnered with two first-year FTC teams to help them build their robots, write code, and prepare for their first competition.",
+    desc: "We helped begin 2 FTC teams and multiple FLL teams in our local area. Some of the FTC teams we helped include #31675, and #32738",
   },
   {
     tag: "Community Event",
@@ -152,18 +229,18 @@ const OUTREACH = [
 
 const SPONSORS = {
   gold: [
-    { name: "TechCorp Inc.", type: "Technology Partner" },
-    { name: "Innovate Foundation", type: "Education Grant" },
+    { name: "Apple", type: "Technology Partner" },
+    { name: "Qualcomm", type: "Technology Partner" },
   ],
   silver: [
-    { name: "Local Hardware Co.", type: "Parts Sponsor" },
-    { name: "STEM Forward", type: "Education Partner" },
-    { name: "City Engineering", type: "Mentorship" },
+    { name: "Kumon", type: "Education Partner" },
+    { name: "AMD", type: "Technology Support" },
+    { name: "International Foods", type: "Community Partner" },
   ],
   bronze: [
-    { name: "Pizza Palace", type: "Food Sponsor" },
-    { name: "Print & Go", type: "Print Services" },
-    { name: "Parent Booster Club", type: "Community Support" },
-    { name: "School Foundation", type: "School Support" },
+    { name: "Kabaji Grill", type: "Food Sponsor" },
+    { name: "Phoenicia", type: "Food Sponsor" },
+    { name: "Academix Tutoring", type: "Education Support" },
+    { name: "The Rahman Family", type: "Family Support" },
   ],
 };

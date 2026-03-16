@@ -55,18 +55,59 @@ window.addEventListener("scroll", () => {
 // ---- TEAM ----
 function renderTeam() {
   const grid = document.getElementById("teamGrid");
-  grid.innerHTML = MEMBERS.map(
-    (m) => `
-    <div class="member-card">
-      <div class="img-placeholder member-photo">${m.name.split(" ")[0]}'s Photo</div>
-      <div class="member-info">
-        <div class="member-name">${m.name}</div>
-        <div class="member-role">${m.role}</div>
-        <div class="member-grade">${m.grade}</div>
+
+  // Define the rows
+  const rows = [
+    [0, 1, 2], // Hamza, Ibrahim, Zain
+    [3, 4, 5, 6], // Sereen, Safa, Nusaybah, Ihsan
+    [7, 8, 9], // Zayd, Shaheen, Haani
+  ];
+
+  grid.innerHTML = rows
+    .map((row) => {
+      const rowMembers = row.map((index) => MEMBERS[index]);
+      return `
+      <div class="team-row">
+        ${rowMembers
+          .map(
+            (m) => `
+          <div class="member-card">
+            <div class="img-placeholder member-photo">${m.name.split(" ")[0]}'s Photo</div>
+            <div class="member-info">
+              <div class="member-name">${m.name}</div>
+              <div class="member-role">${m.role}</div>
+              <div class="member-grade">${m.grade}</div>
+            </div>
+          </div>
+        `,
+          )
+          .join("")}
       </div>
+    `;
+    })
+    .join("");
+}
+
+// ---- MENTORS ----
+function renderMentors() {
+  const grid = document.getElementById("mentorsGrid");
+
+  grid.innerHTML = `
+    <div class="mentor-row">
+      ${MENTORS.map(
+        (m) => `
+        <div class="mentor-card">
+          <div class="img-placeholder mentor-photo">${m.name.split(" ")[1]}'s Photo</div>
+          <div class="mentor-info">
+            <div class="mentor-name">${m.name}</div>
+            <div class="mentor-role">${m.role}</div>
+            <div class="mentor-expertise">${m.expertise}</div>
+          </div>
+        </div>
+      `,
+      ).join("")}
     </div>
-  `,
-  ).join("");
+  `;
 }
 
 // ---- COMPETITION TIMELINE ----
@@ -95,10 +136,11 @@ function renderAwards() {
     (a) => `
     <div class="award-card">
       <div class="award-icon">${a.icon}</div>
-      <div>
+      <div class="award-content">
         <div class="award-title">${a.title}</div>
         <div class="award-event">${a.event}</div>
         <div class="award-date">${a.date}</div>
+        <div class="award-description">${a.description}</div>
       </div>
     </div>
   `,
@@ -173,7 +215,7 @@ function startTypingAnimation() {
   let isDeleting = false;
 
   const TYPE_SPEED = 80; // ms per character when typing
-  const DELETE_SPEED = 120; // ms per character when deleting
+  const DELETE_SPEED = 70; // ms per character when deleting
   const HOLD_DELAY = 2800; // ms to hold before deleting
   const NEXT_DELAY = 400; // ms pause before typing next phrase
 
@@ -213,6 +255,7 @@ function startTypingAnimation() {
 document.addEventListener("DOMContentLoaded", () => {
   applyTeamInfo();
   renderTeam();
+  renderMentors();
   renderTimeline();
   renderAwards();
   renderOutreach();
